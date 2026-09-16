@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: alma-urbana-backend
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      JWT_SECRET: "cambia-esta-clave-super-segura"
+      ADMIN_EMAIL: "admin@local.test"
+      ADMIN_PASSWORD: "Admin123!"
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: alma-urbana-frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: "http://localhost:3000/api"
+    restart: unless-stopped
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
