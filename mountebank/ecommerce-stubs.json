@@ -1,0 +1,542 @@
+{
+  "imposters": [
+    {
+      "port": 3000,
+      "protocol": "http",
+      "stubs": [
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "OPTIONS",
+                "path": "/api/health"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 204,
+                "headers": {
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+                  "Access-Control-Allow-Headers": "Content-Type,Authorization",
+                  "Access-Control-Allow-Credentials": "true"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/api/health"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "status": "ok"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "OPTIONS",
+                "path": "/api/auth/register"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 204,
+                "headers": {
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+                  "Access-Control-Allow-Headers": "Content-Type,Authorization",
+                  "Access-Control-Allow-Credentials": "true"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/auth/register"
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"email\\\":\\\"ana@example.com\\\""
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 201,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "message": "Usuario registrado",
+                  "user": {
+                    "id": 1,
+                    "name": "Ana García",
+                    "email": "ana@example.com",
+                    "role": "usuario"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/auth/register"
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"email\\\":\\\"ana@example.com\\\""
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 409,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "error": "El correo ya esta registrado"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/auth/register"
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"password\\\":\\\"corta\\\""
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 400,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "error": "\"password\" length must be at least 8 characters long"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "OPTIONS",
+                "path": "/api/auth/login"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 204,
+                "headers": {
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+                  "Access-Control-Allow-Headers": "Content-Type,Authorization",
+                  "Access-Control-Allow-Credentials": "true"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/auth/login"
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"email\\\":\\\"ana@example.com\\\""
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"password\\\":\\\"Ana12345!\\\""
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "message": "Inicio de sesion exitoso",
+                  "token": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZW1haWwiOiJhbmFAZXhhbXBsZS5jb20iLCJyb2xlIjoidXN1YXJpbyIsImV4cCI6MTcyOTY5NDAwMH0.eyJzaWduYXR1cmUiOiJ0ZXN0LXVzZXIifQ==",
+                  "expiresIn": "1h"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/auth/login"
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"email\\\":\\\"admin@local.test\\\""
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"password\\\":\\\"Admin123!\\\""
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "message": "Inicio de sesion exitoso",
+                  "token": "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwgImVtYWlsIjoiYWRtaW5AbG9jYWwudGVzdCIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyOTY5NDAwMH0.eyJzaWduYXR1cmUiOiJ0ZXN0LWFkbWluIn0=",
+                  "expiresIn": "1h"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/auth/login"
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"email\\\":\\\"ana@example.com\\\""
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"password\\\":\\\"incorrecta\\\""
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 401,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "error": "Credenciales invalidas"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/api/auth/login"
+              }
+            },
+            {
+              "matches": {
+                "body": "\\\"email\\\":\\\"bloqueado@local.test\\\""
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 429,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true",
+                  "Retry-After": "900"
+                },
+                "body": {
+                  "error": "Demasiados intentos. Prueba nuevamente en 15 minutos."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "OPTIONS",
+                "path": "/api/user"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 204,
+                "headers": {
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Methods": "GET,OPTIONS",
+                  "Access-Control-Allow-Headers": "Content-Type,Authorization",
+                  "Access-Control-Allow-Credentials": "true"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/api/user"
+              }
+            },
+            {
+              "equals": {
+                "headers": {
+                  "Authorization": "Bearer valid-user-token"
+                }
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "message": "Contenido para usuarios autenticados",
+                  "user": {
+                    "id": 1,
+                    "email": "ana@example.com",
+                    "role": "usuario"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/api/user"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 401,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "error": "Token requerido"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "OPTIONS",
+                "path": "/api/admin"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 204,
+                "headers": {
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Methods": "GET,OPTIONS",
+                  "Access-Control-Allow-Headers": "Content-Type,Authorization",
+                  "Access-Control-Allow-Credentials": "true"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/api/admin"
+              }
+            },
+            {
+              "equals": {
+                "headers": {
+                  "Authorization": "Bearer valid-admin-token"
+                }
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "message": "Contenido exclusivo para administradores",
+                  "user": {
+                    "id": 2,
+                    "email": "admin@local.test",
+                    "role": "admin"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/api/admin"
+              }
+            },
+            {
+              "equals": {
+                "headers": {
+                  "Authorization": "Bearer valid-user-token"
+                }
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 403,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "error": "No autorizado"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/api/admin"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 401,
+                "headers": {
+                  "Content-Type": "application/json; charset=utf-8",
+                  "Access-Control-Allow-Origin": "http://localhost:5173",
+                  "Access-Control-Allow-Credentials": "true"
+                },
+                "body": {
+                  "error": "Token requerido"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

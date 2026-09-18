@@ -1,0 +1,10 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2026-09-18T02:07:31.985Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2026-09-18T02:07:32.103Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-09-18T02:07:32.128Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-09-18T02:07:45.014Z"}
+{"level":"info","message":"[http:3000] ::1:61153 => GET /","timestamp":"2026-09-18T02:07:50.135Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T02:07:50.141Z"}
+{"level":"info","message":"[http:3000] ::1:51409 => GET /favicon.ico","timestamp":"2026-09-18T02:07:50.204Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T02:07:50.208Z"}
+{"level":"error","message":"[mb:2525] ::1:62758 transmission error X=> {\"code\":\"ERR_HTTP_REQUEST_TIMEOUT\"}","timestamp":"2026-09-18T02:09:02.014Z"}
+{"level":"error","message":"[mb:2525] ::1:64424 transmission error X=> {\"code\":\"ERR_HTTP_REQUEST_TIMEOUT\"}","timestamp":"2026-09-18T02:09:02.015Z"}
