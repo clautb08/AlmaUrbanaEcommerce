@@ -1,0 +1,22 @@
+info:
+  name: POST usuario nuevo
+  type: http
+
+http:
+  method: POST
+  url: http://localhost:3000/api/auth/register
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Ana García",
+        "email": "ana@example.com",
+        "password": "Ana12345!"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

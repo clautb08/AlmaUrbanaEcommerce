@@ -1,0 +1,17 @@
+info:
+  name: GET admin
+  type: http
+
+http:
+  method: GET
+  url: http://localhost:3000/api/admin
+  headers:
+    - name: Authorization
+      value: Bearer valid-admin-token
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
