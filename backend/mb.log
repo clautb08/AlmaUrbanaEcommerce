@@ -1,0 +1,51 @@
+{"level":"info","message":"[mb:2525] mountebank v2.9.1 now taking orders - point your browser to http://localhost:2525/ for help","timestamp":"2026-09-18T23:46:59.796Z"}
+{"level":"info","message":"[mb:2525] PUT /imposters","timestamp":"2026-09-18T23:46:59.838Z"}
+{"level":"info","message":"[http:3000] Open for business...","timestamp":"2026-09-18T23:46:59.853Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:61957 => POST /api/auth/login","timestamp":"2026-09-18T23:47:02.180Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:47:02.183Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-09-18T23:47:14.314Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-09-18T23:47:15.774Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:55799 => POST /api/auth/login","timestamp":"2026-09-18T23:50:19.805Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:50:19.807Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:55801 => POST /api/auth/login","timestamp":"2026-09-18T23:50:44.208Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:50:44.212Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:55803 => POST /api/auth/login","timestamp":"2026-09-18T23:51:22.043Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:51:22.047Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:55806 => POST /api/auth/login","timestamp":"2026-09-18T23:51:49.246Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:51:49.254Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:55807 => POST /api/auth/login","timestamp":"2026-09-18T23:52:34.983Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:52:34.985Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:55808 => POST /api/auth/login","timestamp":"2026-09-18T23:52:36.149Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:52:36.151Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:51591 => POST /api/auth/login","timestamp":"2026-09-18T23:52:56.415Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:52:56.424Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:51592 => POST /api/auth/login","timestamp":"2026-09-18T23:53:00.788Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:64930 => POST /api/auth/login","timestamp":"2026-09-18T23:55:23.871Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:55:23.878Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:64931 => POST /api/auth/login","timestamp":"2026-09-18T23:55:24.966Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-18T23:55:24.970Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:53107 => POST /api/auth/login","timestamp":"2026-09-18T23:58:39.291Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:51563 => POST /api/auth/login","timestamp":"2026-09-19T00:00:41.649Z"}
+{"level":"info","message":"[http:3000] no predicate match, using default response","timestamp":"2026-09-19T00:00:41.653Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:51564 => POST /api/auth/login","timestamp":"2026-09-19T00:00:49.780Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:51565 => GET /api/user","timestamp":"2026-09-19T00:01:09.954Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:49341 => GET /api/user","timestamp":"2026-09-19T00:03:43.102Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:49343 => GET /api/user","timestamp":"2026-09-19T00:03:55.976Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62730 => GET /api/user","timestamp":"2026-09-19T00:03:57.072Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62735 => GET /api/user","timestamp":"2026-09-19T00:04:32.660Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62736 => GET /api/user","timestamp":"2026-09-19T00:04:33.443Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62737 => GET /api/user","timestamp":"2026-09-19T00:04:33.707Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62738 => GET /api/user","timestamp":"2026-09-19T00:04:34.163Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62740 => GET /api/user","timestamp":"2026-09-19T00:06:25.251Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:64850 => GET /api/user","timestamp":"2026-09-19T00:07:39.774Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56788 => POST /api/auth/login","timestamp":"2026-09-19T00:09:23.269Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56789 => POST /api/auth/login","timestamp":"2026-09-19T00:09:24.001Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56790 => POST /api/auth/login","timestamp":"2026-09-19T00:09:24.171Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56791 => POST /api/auth/login","timestamp":"2026-09-19T00:09:24.521Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56792 => POST /api/auth/login","timestamp":"2026-09-19T00:09:24.710Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56793 => POST /api/auth/login","timestamp":"2026-09-19T00:09:24.921Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56795 => POST /api/auth/login","timestamp":"2026-09-19T00:09:27.665Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56814 => GET /api/user","timestamp":"2026-09-19T00:10:14.814Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:56817 => GET /api/user","timestamp":"2026-09-19T00:11:12.163Z"}
+{"level":"info","message":"[http:3000] ::ffff:127.0.0.1:62528 => GET /api/admin","timestamp":"2026-09-19T00:13:15.225Z"}
+{"level":"info","message":"[mb:2525] GET /images/book.jpg","timestamp":"2026-09-19T00:17:12.315Z"}

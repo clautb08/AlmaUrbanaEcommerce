@@ -1,0 +1,9 @@
+name: Despliegue de backend en AWS
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+  runs-on: ubuntu-latest
